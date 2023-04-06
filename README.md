@@ -16,10 +16,12 @@ pip install git+https://github.com/mardonat/crop-yield-prediction.git
 
 Import the modul:
 ```
-from crop-yield-prediction import yieldprediction
+from yieldprediction import yieldprediction
 ```
 
 Import the data using Geopandas
+
+
 
 ## License
 
