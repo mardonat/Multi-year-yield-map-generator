@@ -36,16 +36,26 @@ If only yield data have to be created in a grid or if no line is available, a po
 ```
 random_yielddata_grid(poly,years=5,raster_resulution=10,center=20,b=800,bz=1.5)
 ```
-Jeder Datenpunkt innerhalb der feldgeometrie enthält weißt 6 spalten auf. Eine Spalteenthält die Geometrie, die anderen 5 Spalten enthlaten die ertragsvalues. Sie  wurden standartisiert zu relativen yield values. Dies ist ein gängiges Verfahren zum Vergleich von Yield data zwischen einzlenen Jahren auf einem Schlag (Donat et al. (2022)). Dabei entspricht 100 dem Mittelwert. Datenpunkte mit Werten größer 100 sind Datenpunkte mit Erträgen höher als der Mittelwert. Datenpunkte mit Werten kleiner 100 weisen geringere Erträge auf als der Mittelwert.
+Each data point within the field geometry contains 6 columns. One column contains the geometry, the other 5 columns contain the yield values. They have been standardized to relative yield values. This is a common method to compare yield data between years on a field (Donat et al. (2022)). Here, 100 corresponds to the mean value. Data points with values greater than 100 are data points with yields higher than the mean. Data points with values less than 100 have yields lower than the mean.
 
 ```
-np.random.seed(3)
+from mpl_toolkits.axes_grid1 import make_axes_locatable # need that for a nice plot
 
+np.random.seed(3) # just for the same random values for demonstration
 random_yielddata1=random_yielddata_grid(poly,years=5,raster_resulution=10,center=20,b=800,bz=1.5)
 
-fig, ax=plt.subplots(figsize=(10,10))
-random_yielddata1.plot(ax=ax,column='yield_4',legend=True)
+fig, ax = plt.subplots(figsize  = (20, 20))
+xmin,ymin,xmax,ymax = poly.total_bounds
+divider = make_axes_locatable(ax)
+cax = divider.append_axes("right", size="2.5%", pad=-2.5)
+cax.tick_params(labelsize=30)
+
+random_yielddata1.plot(ax=ax,cax=cax,column='yield_1',legend=True)
 poly.boundary.plot(ax=ax,color='k')
+
+ax.set_xlabel("Eastings",fontsize=26)
+ax.set_ylabel("Northings",fontsize=26)
+ax.text(xmax +0.005,ymax-0.01, "Relative yield (Year 1)", rotation=90, fontsize=48)
 ```
 
 ## License
