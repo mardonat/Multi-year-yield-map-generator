@@ -130,10 +130,31 @@ To generate a classified management map with the classification:
 ```
 For this we only need to set a treshold and filter our gdf:
 ```
+threshold=20
 high_stabel=yield_gdf[yield_gdf['SD']<threshold][yield_gdf['mean']>100]
 low_stabel=yield_gdf[yield_gdf['SD']<threshold][yield_gdf['mean']<100]
 unstabel=yield_gdf[yield_gdf['SD']>threshold]
 ```
+and plot it subsequently:
+```
+fig, ax = plt.subplots(figsize  = (20, 20))
+xmin,ymin,xmax,ymax = poly.total_bounds
+
+poly.boundary.plot(ax=ax,color='k')
+high_stabel.plot(ax=ax,color='g',alpha=0.7,markersize=5)
+low_stabel.plot(ax=ax,color='r',alpha=0.7,markersize=5)
+unstabel.plot(ax=ax,color='b',alpha=0.7,markersize=5)
+
+ax.text( xmax-0.0065,ymax-0.00855,"Yield Classification", fontsize=35)
+colors = {'Higher yielding and stable ':'green', 'Lower yielding and stable ':'red', 'Unstabel':'blue'}         
+labels = list(colors.keys())
+handles = [plt.Rectangle((0,0),0.01,0.01, ls =':',lw = 1, ec='k',color=colors[label]) for label in labels]
+plt.legend(handles, labels,loc='lower right',fontsize=30,facecolor='white', framealpha=1)
+ax.set_xlabel("Eastings",fontsize=26)
+ax.set_ylabel("Northings",fontsize=26)
+```
+
+<img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_classification.png" width="900" height="500">
 
 ## License
 
