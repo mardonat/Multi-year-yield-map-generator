@@ -20,6 +20,7 @@ from yieldprediction import yieldprediction
 ```
 
 Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/crop-yield-prediction/tree/main/tutorials/test_data))
+
 ```
 [1] line = gpd.read_file('line.shp')
 [2] line= line.to_crs('epsg:4326')
