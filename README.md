@@ -154,7 +154,7 @@ ax.set_xlabel("Eastings",fontsize=26)
 ax.set_ylabel("Northings",fontsize=26)
 ```
 
-<img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_classification.png" width="900" height="500">
+<img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_classification.png" width="700" height="500">
 
 ## License
 
