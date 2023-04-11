@@ -19,7 +19,7 @@ Import the modul:
 from yieldprediction import yieldprediction
 ```
 
-Import the data using Geopandas
+Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/crop-yield-prediction/tree/main/tutorials/test_data))
 ```
 [1] line = gpd.read_file('line.shp')
 [2] line= line.to_crs('epsg:4326')
@@ -122,7 +122,7 @@ ax.text(xmax +0.005,ymax-0.01, "Standard deviation (σ)", rotation=90, fontsize=
 ```
 <img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_SD.png" width="900" height="500">
 
-To generate a classified management map with the classification:
+We can also generate a classified management map with the following classification:
 ```
 + higher yielding and stable
 + lower yielding and stable
