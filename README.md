@@ -128,6 +128,12 @@ To generate a classified management map with the classification:
 + lower yielding and stable
 + unstable
 ```
+For this we only need to set a treshold and filter our gdf:
+```
+high_stabel=yield_gdf[yield_gdf['SD']<threshold][yield_gdf['mean']>100]
+low_stabel=yield_gdf[yield_gdf['SD']<threshold][yield_gdf['mean']<100]
+unstabel=yield_gdf[yield_gdf['SD']>threshold]
+```
 
 ## License
 
