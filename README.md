@@ -86,6 +86,42 @@ ax.text(xmax +0.005,ymax-0.01, "Relative yield (Year 1)", rotation=90, fontsize=
 ```
 <img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_rows.png" width="900" height="500">
 
+
+To check the temporal stability we use the standard deviation of all years:
+
+```
+##extract yield and geometry column -> if poly is used with severell additional atributes
+
+yield_cols = [col for col in random_yielddata1.columns if col.startswith('geometry') or col.startswith('yield')]
+yield_df = random_yielddata1[yield_cols]
+
+#calculation of mean,SD and CV
+yield_cols = [col for col in random_yielddata1.columns if col.startswith('yield')]
+
+yield_df1=yield_df.copy()
+yield_df1['mean']=yield_df1[yield_cols].mean(axis=1)
+yield_df1['SD']=yield_df1[yield_cols].std(axis=1)
+yield_df1['CV']=yield_df1['SD']/yield_df1['mean']
+yield_gdf=gpd.GeoDataFrame(yield_df1,geometry='geometry')
+```
+By plotting the column 'SD' we can look at temporal stability of the data points:
+
+```
+fig, ax = plt.subplots(figsize  = (20, 20))
+divider = make_axes_locatable(ax)
+cax = divider.append_axes("right", size="2.5%", pad=-2.5)
+cax.tick_params(labelsize=30)
+xmin,ymin,xmax,ymax = poly.total_bounds
+
+yield_gdf.plot(ax=ax,cax=cax,column='SD',cmap='OrRd',legend=True)
+poly.boundary.plot(ax=ax,color='k')
+
+ax.set_xlabel("Eastings",fontsize=26)
+ax.set_ylabel("Northings",fontsize=26)
+ax.text(xmax +0.005,ymax-0.01, "Standard deviation (σ)", rotation=90, fontsize=48)
+```
+<img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_SD.png" width="900" height="500">
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
