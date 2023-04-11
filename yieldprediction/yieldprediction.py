@@ -62,7 +62,7 @@ def random_yielddata_grid(poly,years=10,raster_resulution=10, center=20,b=60,bz=
         
 
         for i in range(maps.shape[2]):
-            gdf_points["yield_"+str(2000+i)] = maps[:,:,i].ravel()
+            gdf_points["yield_"+str(i)] = maps[:,:,i].ravel()
         gdf_points=gdf_points.set_crs('{}'.format(EPSG))
         gdf_points
 
