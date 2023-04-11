@@ -58,7 +58,7 @@ ax.set_xlabel("Eastings",fontsize=26)
 ax.set_ylabel("Northings",fontsize=26)
 ax.text(xmax +0.005,ymax-0.01, "Relative yield (Year 1)", rotation=90, fontsize=48)
 ```
-<img src="https://github.com/mardonat/patchmaps/blob/main/tutorials/images/field_with_runline.PNG" width="900" height="700">
+<img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield.png" width="300" height="200">
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
