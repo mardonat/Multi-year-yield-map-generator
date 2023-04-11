@@ -122,6 +122,11 @@ ax.text(xmax +0.005,ymax-0.01, "Standard deviation (σ)", rotation=90, fontsize=
 ```
 <img src="https://github.com/mardonat/crop-yield-prediction/blob/main/tutorials/images/test_usa_field_yield_SD.png" width="900" height="500">
 
+To generate aclassified management map with the classification 
+*‘higher yielding and stable’
+*‘lower yielding and stable’
+*‘unstable’
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
