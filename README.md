@@ -8,7 +8,7 @@ This tool can be used to validate and compare methods of yield map filtering, sp
 You can install via pip:
 
 ```
-pip install git+https://github.com/mardonat/crop-yield-prediction.git
+pip install git+https://github.com/mardonat/Multi-year-yield-map-generator.git
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -20,7 +20,7 @@ Import the modul:
 from yieldprediction import yieldprediction
 ```
 
-Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/crop-yield-prediction/tree/main/tutorials/test_data))
+Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/Multi-year-yield-map-generator/tree/main/tutorials/test_data))
 
 ```
 [1] line = gpd.read_file('line.shp')
