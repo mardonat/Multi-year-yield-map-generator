@@ -171,6 +171,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Marco Donat -  marco.donat@zalf.de
 
-Project Link: [https://github.com/mardonat/Multi-year-yield-map-generator-](https://github.com/mardonat/Multi-year-yield-map-generator-)
+Project Link: [https://github.com/mardonat/Multi-year-yield-map-generator](https://github.com/mardonat/Multi-year-yield-map-generator)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
