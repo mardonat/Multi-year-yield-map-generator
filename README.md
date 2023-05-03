@@ -20,7 +20,7 @@ Import the modul:
 from yieldprediction import yieldprediction
 ```
 
-Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/Multi-year-yield-map-generator/tree/main/tutorials/test_data))
+Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/Multi-year-yield-map-generator-/tree/main/tutorials))
 
 ```
 [1] line = gpd.read_file('line.shp')
