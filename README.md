@@ -1,5 +1,5 @@
 ## About The Project
-### Crop-yield-prediction is a tool for random but realistic plant yield modeling. The yield correlates spatially and temporally and can be regulated in its temporal and spatial heterogeneity via individual parameters. It is designed to be used worldwide and to take into account actual working directions.  
+Crop-yield-prediction is a tool for random but realistic plant yield modeling. The yield correlates spatially and temporally and can be regulated in its temporal and spatial heterogeneity via individual parameters. It is designed to be used worldwide and to take into account actual working directions.  
 This tool can be used to validate and compare methods of yield map filtering, spatial interpolation and management zone creation. 
 
 
