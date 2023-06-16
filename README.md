@@ -17,7 +17,7 @@ pip install git+https://github.com/mardonat/Multi-year-yield-map-generator.git
 
 Import the modul:
 ```
-from Multi-year-yield-map-generator import yieldprediction
+from yieldprediction import yieldprediction
 ```
 
 Import the data using Geopandas (Data can be downloaded in the [tutorial folder](https://github.com/mardonat/Multi-year-yield-map-generator-/tree/main/tutorials))
