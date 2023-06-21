@@ -13,7 +13,6 @@ pip install git+https://github.com/mardonat/Multi-year-yield-map-generator.git
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
-hallo
 
 Import the modul:
 ```
